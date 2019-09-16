@@ -31,7 +31,7 @@ def translatew(word):
         return False
 
     for i in outext[1:]:
-        print(i)
+        # print(i)
         i = i.replace("<!--", "")
         i = i.replace("// -->", "")
         stlist = i.split("result_list();")
