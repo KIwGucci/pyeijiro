@@ -91,5 +91,5 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "和英 & 英英辞書"))
         self.pushButton_cl.setText(_translate("Dialog", "Clear"))
         self.pushButton_cl.setShortcut(_translate("Dialog", "Space"))
-        self.label_3.setText(_translate("Dialog", "Edit Line 以外の場所でSpaceを押すとClear. Rを押すと発音チェック切り替え"))
+        self.label_3.setText(_translate("Dialog", "Edit Line 以外の場所でSpaceを押すとClear"))
 
