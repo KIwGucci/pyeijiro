@@ -22,8 +22,7 @@ def translatew(word):
     outext = []
     result = ""
     try:
-        for l in soup.findAll('div',{"id": "resultsList"})[0]:
-            # print(l)
+        for l in soup.findAll('div', {"id": "resultsList"})[0]:
             try:
                 outext.append(l.text)
             except AttributeError:
@@ -32,6 +31,7 @@ def translatew(word):
         return False
 
     for i in outext[1:]:
+        print(i)
         i = i.replace("<!--", "")
         i = i.replace("// -->", "")
         stlist = i.split("result_list();")
@@ -40,11 +40,11 @@ def translatew(word):
             result += j
     result = re.sub('◆【|【', '\n【', result)
     result = re.sub("\n\n\n", '\n', result)
-    result = re.sub('｛.*?｝', '', result)
+    result = re.sub('｛.*?｝', '\n', result)
     # result = re.sub(r"・", r' ◇ ', result)
     preresult = result.split('#div-gpt-ad-')[0]
     afresult = result.split(r'});')[1]
-    result = preresult.strip()+afresult.strip() 
+    result = preresult.strip()+'\n'+afresult.strip()
     return result
 
 
@@ -72,8 +72,6 @@ def translate_enen(word):
     return outext
 
 
-
-
 class MainWindow(QWidget):
     """Guiを構築"""
 
@@ -91,6 +89,7 @@ class MainWindow(QWidget):
         word = self.ui.lineEdit_en.text().lower()
         if word == "":
             jaword = None
+            enenword = None
         else:
             jaword = translatew(word)
             enenword = translate_enen(word)

@@ -77,7 +77,7 @@ class Ui_Dialog(object):
         self.label_3.setMaximumSize(QtCore.QSize(16777215, 15))
         font = QtGui.QFont()
         font.setFamily("Menlo")
-        font.setPointSize(15)
+        font.setPointSize(12)
         self.label_3.setFont(font)
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
