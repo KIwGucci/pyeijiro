@@ -8,6 +8,6 @@ Beautiful Soup4とPyQtをQtGuiアプリ用の仮想環境などを作成して�
 (Mac Os , Linux 環境ではpyenv. Windows環境ではminicondaを使って仮想環境を用意します)
 Install python by miniconda or pyenv (I recommend using virtual environment : use pyenv on Mac Os and linux. use miniconda on Windows)
 
- ## Known probrem
+ ## Known problem
  
  最近英辞郎のWeb記述方法が変わって、検索結果の整形がうまくいかない場合がある。
