@@ -40,7 +40,7 @@ def translatew(word):
             result += j
     result = re.sub('◆【|【', '\n【', result)
     result = re.sub("\n\n\n", '\n', result)
-    result = re.sub('｛.*?｝', '\n', result)
+    result = re.sub('｛.*?｝', '', result)
     # result = re.sub(r"・", r' ◇ ', result)
     preresult = result.split('#div-gpt-ad-')[0]
     afresult = result.split(r'});')[1]
