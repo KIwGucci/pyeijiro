@@ -8,6 +8,9 @@ Beautiful Soup4とPyQtをQtGuiアプリ用の仮想環境などを作成して�
 (Mac Os , Linux 環境ではpyenv. Windows環境ではminicondaを使って仮想環境を用意します)
 Install python by miniconda or pyenv (I recommend using virtual environment : use pyenv on Mac Os and linux. use miniconda on Windows)
 
+Macとwindowsで動作確認をしていますが、Mac環境に合わせてフォント指定をしているためWindowsでの字体は大きさが適切にならない場合があります。
+フォントの大きさや使用フォント指定は[uiEnglishdictionary.py]を変更することで可能です。
+
  ## Known problem
  
  最近英辞郎のWeb記述方法が変わって、検索結果の整形がうまくいかない場合がある。
