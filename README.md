@@ -2,6 +2,7 @@
 英辞郎とOxford 英英辞書を利用できるpython toolです。PyQtを使ってGuiアプリにしています。
 
 English dictionary tool with [Eijiro on the Web](https://eow.alc.co.jp) and [Oxford learner's Dictionary](https://www.oxfordlearnersdictionaries.com)
+A python tool that can use Eijiro and Oxford English-English dictionaries. I use PyQt as a Gui app
 
 ## Quick Start
 Beautiful Soup4とPyQtをQtGuiアプリ用の仮想環境などを作成して使用します。
