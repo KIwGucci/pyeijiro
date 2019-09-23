@@ -42,9 +42,12 @@ def translatew(word):
     result = re.sub("\n\n\n", '\n', result)
     result = re.sub('｛.*?｝', '', result)
     # result = re.sub(r"・", r' ◇ ', result)
-    preresult = result.split('#div-gpt-ad-')[0]
-    afresult = result.split(r'});')[1]
-    result = preresult.strip()+'\n'+afresult.strip()
+    try:
+        preresult = result.split('#div-gpt-ad-')[0]
+        afresult = result.split(r'});')[1]
+        result = preresult.strip()+'\n'+afresult.strip()
+    except IndexError:
+        pass
     return result
 
 
