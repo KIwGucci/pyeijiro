@@ -58,10 +58,12 @@ def translate_enen(word):
         'User-Agent':
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0"}
     base_url = f"https://www.oxfordlearnersdictionaries.com/definition/english/{word}?"
+    # https://www.oxfordlearnersdictionaries.com/definition/english/encryption?q=encryptions
     query = {}
     query["q"] = word
     ret = requests.get(base_url, headers=headers, params=query)
     soup = BeautifulSoup(ret.content, "lxml")
+    # print(soup)
     idioms = soup.find_all("span", {"id": re.compile(
         f'^{word}_'), 'class': re.compile("idm|def")})
     for idi in idioms:
